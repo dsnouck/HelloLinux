@@ -3,11 +3,10 @@ namespace HelloLinux.Database;
 using HelloLinux.Models;
 using Microsoft.EntityFrameworkCore;
 
-
 public class HelloLinuxContext : DbContext
 {
     public DbSet<Message> Messages => this.Set<Message>();
-    
+
     public string DatabasePath { get; }
 
     public HelloLinuxContext()

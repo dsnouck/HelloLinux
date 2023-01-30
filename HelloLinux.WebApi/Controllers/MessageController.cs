@@ -9,9 +9,9 @@ public class MessageController : ControllerBase
 {
     private readonly IMessageComponent messageComponent;
 
-    public MessageController()
+    public MessageController(IMessageComponent messageComponent)
     {
-        this.messageComponent = new MessageComponent();
+        this.messageComponent = messageComponent;
     }
 
     [HttpGet]

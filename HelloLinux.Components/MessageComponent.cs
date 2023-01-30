@@ -6,9 +6,9 @@ public class MessageComponent: IMessageComponent
 {
     private readonly IMessageRepository messageRepository;
 
-    public MessageComponent()
+    public MessageComponent(IMessageRepository messageRepository)
     {
-        this.messageRepository = new MessageRepository();
+        this.messageRepository = messageRepository;
     }
 
     public string GetMessage()
