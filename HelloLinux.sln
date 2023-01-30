@@ -5,6 +5,8 @@ VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HelloLinux.ConsoleApplication", "HelloLinux.ConsoleApplication\HelloLinux.ConsoleApplication.csproj", "{98AFAD5A-0139-45F2-9DE0-D0DA7CA1F34C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HelloLinux.WebApi", "HelloLinux.WebApi\HelloLinux.WebApi.csproj", "{D6376C42-A468-4205-9AD4-1447D9222AB9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -18,5 +20,9 @@ Global
 		{98AFAD5A-0139-45F2-9DE0-D0DA7CA1F34C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{98AFAD5A-0139-45F2-9DE0-D0DA7CA1F34C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{98AFAD5A-0139-45F2-9DE0-D0DA7CA1F34C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D6376C42-A468-4205-9AD4-1447D9222AB9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D6376C42-A468-4205-9AD4-1447D9222AB9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D6376C42-A468-4205-9AD4-1447D9222AB9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D6376C42-A468-4205-9AD4-1447D9222AB9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
