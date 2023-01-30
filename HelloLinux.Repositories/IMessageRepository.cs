@@ -1,6 +1,10 @@
 namespace HelloLinux.Repositories;
 
+using HelloLinux.Models;
+
 public interface IMessageRepository
 {
-    string GetMessage();
+    Message GetMessage();
+    
+    void UpdateMessage(Message message);
 }

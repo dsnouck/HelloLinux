@@ -17,6 +17,12 @@ public class MessageController : ControllerBase
     [HttpGet]
     public string Get()
     {
-        return this.messageComponent.GetMessage();
+        return this.messageComponent.GetMessageContent();
+    }
+
+    [HttpPut]
+    public void Put(string content)
+    {
+        this.messageComponent.UpdateMessageContent(content);
     }
 }

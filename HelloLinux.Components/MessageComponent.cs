@@ -11,8 +11,15 @@ public class MessageComponent: IMessageComponent
         this.messageRepository = messageRepository;
     }
 
-    public string GetMessage()
+    public string GetMessageContent()
     {
-        return this.messageRepository.GetMessage();
+        return this.messageRepository.GetMessage().Content;
+    }
+
+    public void UpdateMessageContent(string content)
+    {
+        var message = this.messageRepository.GetMessage();
+        message.Content = content;
+        this.messageRepository.UpdateMessage(message);
     }
 }

@@ -12,13 +12,9 @@ public class MessageRepository : IMessageRepository
         this.helloLinuxContext = new HelloLinuxContext();
     }
 
-    public string GetMessage()
+    public Message GetMessage()
     {
-        if (this.helloLinuxContext.Messages.Count() == 1)
-        {
-            return this.helloLinuxContext.Messages.Single().Content;
-        }
-        else
+        if (this.helloLinuxContext.Messages.Count() != 1)
         {
             foreach (var message in this.helloLinuxContext.Messages)
             {
@@ -30,10 +26,15 @@ public class MessageRepository : IMessageRepository
                 Content = "Hello, linux!",
             };
             this.helloLinuxContext.Messages.Add(newMessage);
-            
             this.helloLinuxContext.SaveChanges();
-            
-            return newMessage.Content;
         }
+
+        return this.helloLinuxContext.Messages.Single();
+    }
+
+    public void UpdateMessage(Message message)
+    {
+        this.helloLinuxContext.Messages.Update(message);
+        this.helloLinuxContext.SaveChanges();
     }
 }
